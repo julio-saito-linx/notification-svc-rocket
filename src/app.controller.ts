@@ -10,7 +10,7 @@ export class AppController {
     return this.appService.findMany();
   }
 
-  @Post('random')
+  @Post('create_random')
   async create_random() {
     return this.appService.create_random();
   }
