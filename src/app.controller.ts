@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('notifications')
@@ -8,5 +8,10 @@ export class AppController {
   @Get()
   async findMany() {
     return this.appService.findMany();
+  }
+
+  @Post('random')
+  async create_random() {
+    return this.appService.create_random();
   }
 }
